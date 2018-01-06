@@ -16,8 +16,6 @@ let PostSchema = new Schema({
     }
 });
 
-// var jon = new Schema({username:"Jon", password:"Jon"});
-
 let User = mongoose.model('User', PostSchema);
 
 module.exports = User;
