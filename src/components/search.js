@@ -5,17 +5,26 @@ import React, { Component } from 'react';
 
 class Search extends Component {
 
-	coolSearchMethod () {
-		<div>
-			Brian Does Stuff Here
-		</div>
+	constructor(props) {
+		super(props);
+		this.state = {term: ""};
 	}
 
+	onInputChange(term){
+		this.setState({term: term})
+		this.props.onSearchTermChange(this.state.term)
+	}
 
 	render() {
 		return (
 			<div className="Search">
-				<p>This is search</p>
+				<input
+					type='text'
+					placeholder='search by address'
+					value={this.state.term}
+					onChange={event => this.onInputChange(event.target.value)}
+				/>
+				<p>SEARCH HERE</p>
 			</div>
 		);
 	}
