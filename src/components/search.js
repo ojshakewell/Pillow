@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-var axios = require("axios");
-var parseString = require("xml2js).parseString");
+// var axios = require("axios");
+// var parseString = require("xml2js").parseString;
 
 class Search extends Component {
 
@@ -15,7 +15,7 @@ class Search extends Component {
 	render() {
 		return (
 			<div className="Search">
-				
+				<p>This is search</p>
 			</div>
 		);
 	}
