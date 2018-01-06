@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
 class Comparison extends Component {
+	constructor(props) {
+		super(props);
 
+	}
+	
 	render() {
 		return (
 			<div className="Comparison">

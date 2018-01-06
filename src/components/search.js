@@ -4,30 +4,35 @@ import React, { Component } from 'react';
 // var parseString = require("xml2js").parseString;
 
 class Search extends Component {
-
 	constructor(props) {
 		super(props);
-		this.state = {term: ""};
+		
+			this.state = {term: ""};
+
+
 	}
 
-	onInputChange(term){
-		this.setState({term: term})
-		this.props.onSearchTermChange(this.state.term)
+	onInputChange (term) {
+		this.setState({term});
+		this.props.onSearchTermChange(this.state.term);
+
 	}
 
-	render() {
+	render(){
 		return (
-			<div className="Search">
-				<input
-					type='text'
-					placeholder='search by address'
+     
+			<div className="Search col-md-12">
+				<input 
+					type="text" 
+					placeholder="Search by Address" 
 					value={this.state.term}
 					onChange={event => this.onInputChange(event.target.value)}
 				/>
-				<p>SEARCH HERE</p>
+
 			</div>
 		);
 	}
+
 }
 
 export default Search;
