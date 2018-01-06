@@ -3,23 +3,22 @@ const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 
 let PostSchema = new Schema({
-    title: {
+    username: {
         type: String,
         trim: true,
         required: true
     },
 
-    body: {
+    password: {
         type: String,
-        required: true
-    },
-
-    author: {
-        type: String,
+        trim: true,
         required: true
     }
 });
 
-let Post = mongoose.model('Post', PostSchema);
+// var jon = new Schema({username:"Jon", password:"Jon"});
 
-module.exports = Post;
+let User = mongoose.model('User', PostSchema);
+
+module.exports = User;
+ 
