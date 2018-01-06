@@ -7,7 +7,7 @@ const Post = require('./models/Post');
 const PORT = 8080;
 const app = express();
 
-app.use(bodyParser,json());
+app.use(bodyParser.json());
 
 app.get('/api', (req, res) => res.send('Hello World!'));
 
