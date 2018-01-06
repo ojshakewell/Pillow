@@ -4,21 +4,31 @@ import React, { Component } from 'react';
 // var parseString = require("xml2js").parseString;
 
 class Search extends Component {
+	constructor(props) {
+		super(props);
+		
+			this.state = {term: ""};
 
-	coolSearchMethod () {
-		<div>
-			Brian Does Stuff Here
-		</div>
 	}
 
+	onInputChange (term) {
+		this.setState({term});
+		this.props.onSearchTermChange(this.state.term);
+	}
 
-	render() {
+	render(){
 		return (
-			<div className="Search">
-				<p>This is search</p>
+			<div className="Search col-md-12">
+				<input 
+					type="text" 
+					placeholder="Search by Address" 
+					value={this.state.term}
+					onChange={event => this.onInputChange(event.target.value)}
+				/>
 			</div>
 		);
 	}
+
 }
 
 export default Search;

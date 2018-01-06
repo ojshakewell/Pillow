@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import Header from './components/header';
 import Hero from './components/hero';
@@ -13,14 +14,35 @@ import Comparison from './components/comparison';
 import UserInfo from './components/userinfo';
 import Footer from './components/footer';
 
-
 class App extends Component {
+	constructor(props) {
+		super(props);
+		
+		this.state = {
+			searchTerm: '',
+			properties: []
+		}
+
+	runSearch () {
+		console.log("Great Success");
+		// 		YouTubeSearch({ key: apiKey, term: term }, videos => {
+		//     console.log(videos);
+
+		//     this.setState({
+		//     	properties: properties,
+		//     	selectedProperty: properties[0]
+		//     });
+		// 		});	
+	}
+
+	const runSearchThrottle = _.debounce((term) => {this.runSearch(term)}, 700);
+
 	render() {
 		return (
 			<div className="App">
 				<Header />
 				<Hero />
-				<Search />
+				<Search onSearchTermChange={runSearchThrottle}/>
 				<Body />
 				<GoogleMap />
 				<List />
