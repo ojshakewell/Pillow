@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "concurrently": "^3.5.1",
+    "nodemon": "^1.14.8",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.0.17",
@@ -17,5 +18,17 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  }
+  },
+  "description": "[![Waffle.io - Columns and their card count](https://badge.waffle.io/ojshakewell/project3.png?columns=all)](https://waffle.io/ojshakewell/project3?utm_source=badge)",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ojshakewell/Pillow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ojshakewell/Pillow/issues"
+  },
+  "homepage": "https://github.com/ojshakewell/Pillow#readme"
 }
