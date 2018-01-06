@@ -9,15 +9,18 @@ class Search extends Component {
 		
 			this.state = {term: ""};
 
+
 	}
 
 	onInputChange (term) {
 		this.setState({term});
 		this.props.onSearchTermChange(this.state.term);
+
 	}
 
 	render(){
 		return (
+     
 			<div className="Search col-md-12">
 				<input 
 					type="text" 
@@ -25,6 +28,7 @@ class Search extends Component {
 					value={this.state.term}
 					onChange={event => this.onInputChange(event.target.value)}
 				/>
+
 			</div>
 		);
 	}
