@@ -22,8 +22,9 @@ class App extends Component {
 			searchTerm: '',
 			properties: []
 		}
+	}
 
-	runSearch () {
+	runSearch (term) {
 		console.log("Great Success");
 		// 		YouTubeSearch({ key: apiKey, term: term }, videos => {
 		//     console.log(videos);
@@ -35,9 +36,10 @@ class App extends Component {
 		// 		});	
 	}
 
-	const runSearchThrottle = _.debounce((term) => {this.runSearch(term)}, 700);
-
 	render() {
+
+		const runSearchThrottle = _.debounce((term) => {this.runSearch(term)}, 700);
+
 		return (
 			<div className="App">
 				<Header />
