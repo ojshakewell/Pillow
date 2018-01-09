@@ -6,29 +6,28 @@ import React, { Component } from 'react';
 class Search extends Component {
 	constructor(props) {
 		super(props);
-		
-			this.state = {term: ""};
-
-
+		this.state = {
+			searchTerm: '',
+			properties: []
+		};
 	}
 
-	onInputChange (term) {
-		this.setState({term});
-		this.props.onSearchTermChange(this.state.term);
-
+	onInputChange (searchTerm) {
+		this.setState({searchTerm});
+		this.props.onSearchTermChange(this.state.searchTerm);
 	}
 
 	render(){
 		return (
-     
 			<div className="Search col-md-12">
 				<input 
-					type="text" 
-					placeholder="Search by Address" 
-					value={this.state.term}
-					onChange={event => this.onInputChange(event.target.value)}
+				className="search-field" 
+				type="text" 
+				placeholder="Enter an address, city, or zipcode"
+				value={this.state.searchTerm}
+				onChange={event => this.onInputChange(event.target.value)}
 				/>
-
+				<a className="btn btn-full" href="#">Search Now</a>
 			</div>
 		);
 	}

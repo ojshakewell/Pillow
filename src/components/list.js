@@ -1,18 +1,22 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ListItem from './listitem';
 
-class List extends Component {
-	constructor(props) {
-		super(props);
+// need to define zillow.id as key under ListItem property
 
-	}
-
-	render() {
+const PropertyList = ({properties})  => {
+	const PropertyList = properties.map(property => {
 		return (
-			<div className="List">
-				<p>This is a list</p>
-			</div>
-		);
-	}
+			<ListItem 
+				property={property} 
+			/>
+		)
+	});
+
+	return (
+		<ul id="list">
+			{PropertyList}
+		</ul>
+	);
 }
 
-export default List;
+export default PropertyList;
