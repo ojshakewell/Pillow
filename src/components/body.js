@@ -7,13 +7,13 @@ const Body = () => {
 				<section className="section-features">
 					<div className="row">
 						<h2>Best Home &mdash; Best Price</h2>
-						<p className="long-copy">Pillow is the number one place to find your next home. We're a site dedictated to delivering MLS listed homes to you based on your search critertia. Our site contains many features, including:</p>
+						<p className="long-copy">Pillow is the number one place to find your next home. We're a site dedictated to delivering MLS listed homes near you for your next home upgrade. Our site contains many features, including:</p>
 					</div>
 					<div className="row">
 						<div className="col span-1-of-4 box">
 							<i className="ion-android-search icon-big"></i>
 							<h3>Search Options</h3>
-							<p>Choose to search by address, city, or zip code. More advanced criteria coming soon. We'll provide the best results no matter what.</p>
+							<p>Search an address to find properties nearby with similar homes to compare. More advanced criteria coming soon. We'll provide the best results no matter what.</p>
 						</div>
 						<div className="col span-1-of-4 box">
 							<i className="ion-podium icon-big"></i>

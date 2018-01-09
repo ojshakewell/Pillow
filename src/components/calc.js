@@ -1,6 +1,6 @@
 import React from 'react';
 
-// reference trulia for design and logic
+// remove - no longer doing
 
 const Calc = ({properties})  => {
 

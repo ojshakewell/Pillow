@@ -8,7 +8,7 @@ const ListItem = ({property}) => {
 		<li>
 			<div class="listitem">
 				<div class="listitemimg">
-					<img src="http://www.hindustantimes.com/rf/image_size_640x362/HT/p2/2016/11/15/Pictures/dream-house-front_8843d09c-ab15-11e6-b961-04ee4fa7b706.jpg" alt="fake image" />
+					<img src="http://www.hindustantimes.com/rf/image_size_640x362/HT/p2/2016/11/15/Pictures/dream-house-front_8843d09c-ab15-11e6-b961-04ee4fa7b706.jpg" alt="fake property" />
 				</div>
 				<div class="listitemdescription">
 					<p>{property}</p>

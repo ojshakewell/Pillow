@@ -1,5 +1,7 @@
 import React from 'react';
 
+// remove - no longer doing
+
 const GoogleMap = () => {
 
 		return (
