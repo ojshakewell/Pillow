@@ -3,8 +3,8 @@ import React from 'react';
 const GoogleMap = () => {
 
 		return (
-			<div className="GoogleMap">
-				<p>THIS IS A GoogleMap</p>
+			<div id="map">
+				A map goes here.
 			</div>
 		);
 }

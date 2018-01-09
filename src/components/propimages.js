@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class PropImages extends Component {
-	constructor(props) {
-		super(props);
+const PropImages = ({properties})  => {
 
-	}
-		
-	render() {
-		return (
-			<div className="PropImages">
-				<p>THIS IS A PropImages</p>
-			</div>
-		);
-	}
+	return (
+		<div className="PropImages">
+			<img src="http://shoise.com/wp-content/uploads/2017/01/brilliant-home-photos-with-home.jpg" alt="house" />
+		</div>
+	);
 }
 
 export default PropImages;

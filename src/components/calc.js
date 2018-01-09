@@ -1,18 +1,34 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-class Calc extends Component {
-	constructor(props) {
-		super(props);
+// reference trulia for design and logic
 
-	}
+const Calc = ({properties})  => {
+
+	return (
+		<div className="Calc">
+			<ul className="CalcFields">
+				<li>
+					<label class="priceinputlabel" for="priceinput">Home Price</label> <br />
+					<input class="priceinput" type="text" name="priceinput" />
+				</li>
+
+				<li>
+					<label class="downpaymentinputlabel" for="downpaymentinput">Down Payment</label> <br />
+					<input class="downpaymentinput" type="text" name="downpaymentinput" />
+				</li>
+
+				<li>
+					<label class="interstrateinputlabel" for="interestrateinput">Interest Rate</label> <br />
+					<input class="interestrateinput" type="text" name="interestrateinput" />
+				</li>
+
+			</ul>
+			<br />
+			<p>* All Loans are based on a 30-year fixed rate</p>
+
+		</div>
+	);
 	
-	render() {
-		return (
-			<div className="Calc">
-				<p>THIS IS A CALC</p>
-			</div>
-		);
-	}
 }
 
 export default Calc;

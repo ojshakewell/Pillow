@@ -1,10 +1,14 @@
 import React from 'react';
+import Search from './search';
 
-const Hero = () => {
+const Hero = (props) => {
 
 		return (
 			<div className="Hero">
-				<p>THIS IS A HERO</p>
+				<div className="hero-text-box">
+					<h1>FIND THE PERFECT PLACE TO LAY YOUR HEAD</h1>
+					<Search onSearchTermChange={props.onSearchTermChange} />
+				</div>
 			</div>
 		);
 }

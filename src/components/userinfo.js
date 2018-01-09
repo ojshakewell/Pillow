@@ -8,8 +8,15 @@ class UserInfo extends Component {
 	
 	render() {
 		return (
-			<div className="UserInfo">
-				<p>THIS IS USER INFO</p>
+			<div className="section-UserInfo">
+				
+
+				<p>Username: You gave it, you should know it...</p>
+				<p>Password: You think I'll tell you that?</p>
+				<br />
+				<p>Saved Properties: I'm not psychic.</p>
+
+
 			</div>
 		);
 	}
