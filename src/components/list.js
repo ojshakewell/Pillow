@@ -2,6 +2,7 @@ import React from 'react';
 import ListItem from './listitem';
 
 // need to define zillow.id as key under ListItem property
+// update sizing for full-page view
 
 const PropertyList = ({properties})  => {
 	const PropertyList = properties.map(property => {

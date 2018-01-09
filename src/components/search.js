@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 
-// var axios = require("axios");
-// var parseString = require("xml2js").parseString;
-
 class Search extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			searchTerm: '',
-			properties: []
+			searchTerm: ''
 		};
 	}
 
@@ -23,7 +19,7 @@ class Search extends Component {
 				<input 
 				className="search-field" 
 				type="text" 
-				placeholder="Enter an address, city, or zipcode"
+				placeholder="Enter an address to compare properties"
 				value={this.state.searchTerm}
 				onChange={event => this.onInputChange(event.target.value)}
 				/>
