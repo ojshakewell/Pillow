@@ -1,34 +1,25 @@
-import React, { Component } from 'react';
-import GoogleMap from './map';
+import React from 'react';
+import SearchedProp from './searchedprop';
 import PropertyList from './list';
 
-// need to figure out how to pass properties here 
-// thought was properties={this.state.properties} on the <PropertyList /> component but it's throwing an error
-// redux/flux
-// more help needed
+const SearchResults = ({searchProperty, properties})  => {
 
-// callback function in Search.js to take whatever we get to the API call to the App.js page, then store it and pass it as props to the searchresults.js
-
-class SearchResults extends Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render(){
-		return (
-			<div className="section-SearchResults">
-				<div className="GoogleMap col span-3-of-5">
-					<GoogleMap />
-				</div>
-
-				<div className="List col span-2-of-5">
-					<PropertyList 
-						properties={["123 fake street", "456 nope lane", "789 ilivehere true", "1 more"]}
-					/>
-				</div>
+	return (
+		<div className = "section-SearchResults">
+			<div className = "SearchedProp col span-3-of-5">
+				<SearchedProp 
+					searchProperty = {searchProperty}
+				/>
 			</div>
-		);
-	}
+
+			<div className = "List col span-2-of-5">
+				<PropertyList 
+					properties = {properties}
+					onPropertySelect = {selectedProperty => this.setState({ selectedProperty })}
+				/>
+			</div>
+		</div>
+	);
 }
 
 export default SearchResults;

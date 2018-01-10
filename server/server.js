@@ -12,8 +12,6 @@ const app = express();
 
 app.use(bodyParser.json());
 
-// app.get('/api', (req, res) => res.send('Hello Backend World!'));
-
 mongoose.Promise = Promise;
 mongoose.connect('mongodb://localhost/pillowApp');
 

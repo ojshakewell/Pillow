@@ -280,12 +280,7 @@ a:active {
 /* MAP */
 /* ------------------------------*/
 
-#map {
-	height: 80vh;
-	background-color: black;
-}
-
-.GoogleMap {
+.SearchedProp {
 	padding-right: 20px;
 	padding-left: 20px;
 	padding-bottom: 20px;
@@ -314,24 +309,14 @@ a:active {
 	border: 5px white solid;
 }
 
-.listitemimg {
-	height: 90%;
-	padding-top: 10px;
-	float: left;
-}
-
-.listitemimg img{
-	float: left;
-	height: 100%;
-	padding-left: 10px;
-}
-
 .listitemdescription {
 	height: 80%;
 	padding-top: 10%;
 	padding-right: 10px;
 	float: right;
 }
+
+
 
 
 /* ------------------------------*/

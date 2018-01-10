@@ -1,17 +1,16 @@
 import React from 'react';
 
-// need to update the function runSearch in App.js and include as a property for onClick here of the li item - see demo example from react lady
-// need to determine what to show for each property and update in the li item
-
-const ListItem = ({property}) => {
+const ListItem = ({property, onPropertySelect}) => {
 	return (
-		<li>
+		<li onClick = {() => onPropertySelect(property)}>
 			<div class="listitem">
-				<div class="listitemimg">
-					<img src="http://www.hindustantimes.com/rf/image_size_640x362/HT/p2/2016/11/15/Pictures/dream-house-front_8843d09c-ab15-11e6-b961-04ee4fa7b706.jpg" alt="fake property" />
-				</div>
 				<div class="listitemdescription">
-					<p>{property}</p>
+					<h2>Address</h2>
+					<p>{property.address.steet}</p>
+					<p>{property.address.city}, {property.address.state} {property.address.zipcode}</p>
+					<h3>Zillow Estimate: ${property.zestimate.amount["#text"]}</h3>
+					<h4>Region/Neighborhood: {property.localRealEstate.region["-name"]}</h4>
+					<p>Additional Information: {property.links.homedetails}</p>
 				</div>
 				<div class="clear"></div>
 			</div>

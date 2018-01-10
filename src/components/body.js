@@ -22,8 +22,8 @@ const Body = () => {
 						</div>
 						<div className="col span-1-of-4 box">
 							<i className="ion-social-usd icon-big"></i>
-							<h3>Price Calculator</h3>
-							<p>Not sure how much house you can afford? Each of our properties come with a mortage calculator to keep you out of trouble.</p>
+							<h3>We Know What you Like!</h3>
+							<p>Using a property you enjoy, or your current home, we can find similar properties in the area for you to check out.</p>
 						</div>
 						<div className="col span-1-of-4 box">
 							<i className="ion-person icon-big"></i>
@@ -44,11 +44,11 @@ const Body = () => {
 						<div className="col span-1-of-2 steps-box">
 							<div className="works-step">
 								<div>1</div>
-								<p>Enter the address, city, or zip code of your potential new home.</p>
+								<p>Enter the address, city, and state of the home you would like to compare against.</p>
 							</div>
 							<div className="works-step">
 								<div>2</div>
-								<p>Browse the MLS listed homes in your area, and select a property to view additional detials.</p>
+								<p>Browse similar MLS listed homes in your area, and select a property to view additional detials.</p>
 							</div>
 							<div className="works-step">
 								<div>3</div>
