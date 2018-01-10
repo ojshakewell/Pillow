@@ -1,5 +1,7 @@
 import React from 'react';
 
+//Need to link the Sign-Up/Login button to a modal or something to capture user info and/or login
+
 const Header = () => {
 	return (
 		<nav className="Header">

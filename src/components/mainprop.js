@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import PropDetails from './propdetails';
-import PropImages from './propimages';
-import Calc from './calc';
 
 class MainProp extends Component {
 	constructor(props) {
@@ -12,13 +10,11 @@ class MainProp extends Component {
 	render() {
 		return (
 			<div className="section-MainProp">
-					<div className="col span-2-of-4">
+				<div className="row">
+					<div className="col span-4-of-4">
 						<PropDetails />
 					</div>
-					<div className="col span-2-of-4">
-						<PropImages />
-					</div>	
-				<Calc />
+				</div>
 			</div>
 		);
 	}

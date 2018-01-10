@@ -13,7 +13,10 @@ let parseString = require('xml2js-es6-promise');
 //zillow API key
 let zwsId = 'X1-ZWz18uicz698gb_1d5w6';
 
-//need to add to search integration in RunSearch function and dynamcially update
+//need to add to search integration in RunSearch function and dynamcially update.
+//will require the search.js page to pass search value to RunSearch.
+//To access the API, run yarn start to open backend, npm start to open front-end, then insert {this.runSearch()} into the page you are testing, or connect runSearch() to the search button.
+
 let address = '1925+Quince+St';
 let citystatezip = 'Denver%2C+CO';
 let propId = ''
@@ -23,7 +26,7 @@ class App extends Component {
 		super(props);
 		
 		this.state = {
-			page: "home",
+			page: "search",
 			searchProperty: {},
 			properties: []
 		}
@@ -55,7 +58,12 @@ class App extends Component {
 		})
 		.then((result) => {
 			properties = result;
-			return this.setState({properties: result});
+			return this.setState({
+				properties: result,
+				selectedProperty: ''
+			  },
+
+			);
 		})
 		.then(() => {
 			console.log(properties);
@@ -76,7 +84,10 @@ class App extends Component {
 						<div className="header2">
 							<Header />
 						</div>
-						<SearchResults />
+						<SearchResults 
+							searchProperty = {this.state.searchProperty}
+							properties = {this.state.properties}
+						/>
 						<Footer />
 						<div className="clear"></div>
 					</Fragment>
@@ -107,13 +118,12 @@ class App extends Component {
 							<Header />
 							<div className="clear"></div>
 							<Hero 
-								onSearchTermChange={runSearchThrottle}
+								onSearchTermChange = {this.runSearch()}
 							/>
 						</div>
 						<Body />
 						<Footer />
 						<div className="clear"></div>
-						{this.runSearch()}
 					</Fragment>
 				}
 			</div>
