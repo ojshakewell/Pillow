@@ -9,6 +9,9 @@ const SearchResults = ({searchProperty, properties})  => {
 			<div className = "SearchedProp col span-3-of-5">
 				<SearchedProp 
 					searchProperty = {searchProperty}
+					onPropertySelect={()=>{
+						//stuff goes here
+					}}
 				/>
 			</div>
 
