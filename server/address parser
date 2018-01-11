@@ -1,0 +1,28 @@
+var parseAddress = require('parse-address-string')
+let zwsId = 'X1-ZWz18uicz698gb_1d5w6';
+
+inputAddress = '15856 E Oxford Ave, Aurora, CO'
+
+//inputAddress = '4296 W 7th St, Long Beach, CA 90802'
+
+ 
+parseAddress(inputAddress, function(err,addressObj){
+	//replace spaces with a '+';
+	var address = addressObj.street_address1.replace(/ /g, '+')
+	var city = addressObj.city.replace(/ /g, '+')
+	var citystatezip = city + '%2C+' + addressObj.state//%2C is a ','
+
+    console.log('Street: ', address)
+    console.log('City: ', city)
+    console.log('State: ', addressObj.state)
+    console.log('Zip: ', addressObj.postal_code)
+    console.log('Country: ', addressObj.country)
+	let apiSearchUrl = '/webservice/GetDeepSearchResults.htm?zws-id=' + zwsId + '&address=' + address + '&citystatezip=' + citystatezip;
+    console.log(apiSearchUrl)
+});
+
+
+
+// let address = '1925+Quince+St';
+// let citystatezip = 'Denver%2C+CO';
+// let propId = ''		
