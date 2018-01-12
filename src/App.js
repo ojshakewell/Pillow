@@ -18,28 +18,24 @@ let zwsId = 'X1-ZWz18uicz698gb_1d5w6';
 //To access the API, run yarn start to open backend, npm start to open front-end, then insert {this.runSearch()} into the page you are testing, or connect runSearch() to the search button.
 let inputAddress = '4296 W 7th St, Long Beach, CA 90802'
 
-// let address = '1925+Quince+St';
-// let citystatezip = 'Denver%2C+CO';
-// let propId = ''
-inputAddress = '15856 E Oxford Ave, Aurora, CO'
+let address = '1925+Quince+St';
+let citystatezip = 'Denver%2C+CO';
+let propId = ''
+ 
+// parseAddress(inputAddress, function(err,addressObj){
+// 	//replace spaces with a '+';
+// 	var address = addressObj.street_address1.replace(/ /g, '+')
+// 	var city = addressObj.city.replace(/ /g, '+')
+// 	var citystatezip = city + '%2C+' + addressObj.state//%2C is a ','
 
-//inputAddress = '4296 W 7th St, Long Beach, CA 90802'
-
-parseAddress(input, function(err,addressObj){
-	//parse address replace spaces with a '+';
-	var address = addressObj.street_address1.replace(/ /g, '+')
-	var city = addressObj.city.replace(/ /g, '+')
-	var citystatezip = city + '%2C+' + addressObj.state//%2C is a ','
-
-    console.log('Street: ', address)
-    console.log('City: ', city)
-    console.log('State: ', addressObj.state)
-    console.log('Zip: ', addressObj.postal_code)
-    console.log('Country: ', addressObj.country)
-	let apiSearchUrl = '/webservice/GetDeepSearchResults.htm?zws-id=' + zwsId + '&address=' + address + '&citystatezip=' + citystatezip;
-    console.log(apiSearchUrl)
-    return apiSearchUrl
-});
+//     console.log('Street: ', address)
+//     console.log('City: ', city)
+//     console.log('State: ', addressObj.state)
+//     console.log('Zip: ', addressObj.postal_code)
+//     console.log('Country: ', addressObj.country)
+// 	let apiSearchUrl = '/webservice/GetDeepSearchResults.htm?zws-id=' + zwsId + '&address=' + address + '&citystatezip=' + citystatezip;
+//     console.log(apiSearchUrl)
+// });
 
 
 class App extends Component {
@@ -54,9 +50,8 @@ class App extends Component {
 	}
 
 	runSearch (searchTerm) {
-		parseAddress(inputAddress);
-		//let apiSearchUrl = '/webservice/GetDeepSearchResults.htm?zws-id=' + zwsId + '&address=' + address + '&citystatezip=' + citystatezip;
-		 Make a request for a user with a given ID
+		let apiSearchUrl = '/webservice/GetDeepSearchResults.htm?zws-id=' + zwsId + '&address=' + address + '&citystatezip=' + citystatezip;
+		// Make a request for a user with a given ID
 		let searchProperty;
 		let properties;
 
