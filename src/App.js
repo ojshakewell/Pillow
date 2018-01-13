@@ -7,6 +7,7 @@ import SearchResults from './components/searchresults';
 import MainProp from './components/mainprop';
 import UserInfo from './components/userinfo';
 import Footer from './components/footer';
+import Login from './components/login';
 let axios = require('axios');
 let parseString = require('xml2js-es6-promise');
 
