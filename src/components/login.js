@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Login = () => {
+const Login = (props) => {
 
 		return (
 			<div className="row Login">
-				<form action="/login" method="POST">
+				<form onSubmit={props.userSubmit}>
                <div class="form-group">
                   <label for="username">User Name</label>
                   <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username" />

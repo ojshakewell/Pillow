@@ -7,7 +7,6 @@ import SearchResults from './components/searchresults';
 import MainProp from './components/mainprop';
 import UserInfo from './components/userinfo';
 import Footer from './components/footer';
-import Login from './components/login';
 let axios = require('axios');
 let parseString = require('xml2js-es6-promise');
 
@@ -78,9 +77,9 @@ class App extends Component {
 			properties = result;
 			return this.setState({
 				properties: result,
-				selectedProperty: ''
-			  },
-
+				selectedProperty: '',
+				page: "search"
+			  }
 			);
 		})
 		.then(() => {
@@ -88,6 +87,12 @@ class App extends Component {
 		})
 		.catch(function (error) {
 		  console.log(error);
+		});
+	}
+
+	userSubmit = () => {
+		this.setState({
+			page: "home"
 		});
 	}
 
@@ -125,7 +130,9 @@ class App extends Component {
 						<div className="header2">
 							<Header />
 						</div>
-						<UserInfo />
+						<UserInfo 
+							userSubmit = {this.userSubmit}
+						/>
 						<Footer />
 						<div className="clear"></div>
 					</Fragment>
