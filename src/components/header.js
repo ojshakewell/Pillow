@@ -1,12 +1,18 @@
 import React from 'react';
 
-const Header = () => {
+//Need to link the Sign-Up/Login button to a modal or something to capture user info and/or login
 
-		return (
-			<div className="Header">
-				<p>THIS IS A HEADER</p>
+const Header = () => {
+	return (
+		<nav className="Header">
+			<div className="row">
+				<img className="logo" src="css/img/logo-white.png" alt="Pillow Logo"/>
+				<ul className='main-nav'>
+					<li><a href="#">SIGN-UP/LOGIN</a></li>
+				</ul>
 			</div>
-		);
+		</nav>
+	);
 }
 
 export default Header;

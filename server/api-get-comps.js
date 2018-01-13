@@ -4,10 +4,12 @@ let parseString = require('xml2js').parseString;
 
 //zillow API key
 let zwsId = 'X1-ZWz18uicz698gb_1d5w6';
-let address = '1925+Quince+St';
-let city = 'Denver';
+let propId = '13289515'
+let propCount = 5
 
-let apiUrl = 'http://www.zillow.com/webservice/GetRegionChart.htm?zws-id=' + zwsId + '&city=' + city;
+let apiUrl = 'http://www.zillow.com/webservice/GetComps.htm?zws-id=' + zwsId + '&zpid=' + propId + '&count=' + propCount; 
+//http://www.zillow.com/webservice/GetComps.htm?zws-id=<ZWSID>&zpid=48749425&count=5
+//let apiUrl = 'http://www.zillow.com/webservice/GetComps.htm?zws-id=' + zwsId + '&city=' + propId;
 
 
 // Make a request for a user with a given ID
