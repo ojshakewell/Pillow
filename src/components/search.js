@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-var parseAddress = require('parse-address-string')
+var parseAddress = require('parse-address-string');
 
 
 let zwsId = 'X1-ZWz18uicz698gb_1d5w6';
-let inputAddress = '15856 E Oxford Ave, Aurora, CO'
+let inputAddress = '15856 E Oxford Ave, Aurora, CO';
 //inputAddress = '4296 W 7th St, Long Beach, CA 90802'
 
 var address;
