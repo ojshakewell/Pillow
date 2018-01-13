@@ -272,18 +272,8 @@ a:active {
 
 .section-SearchResults {
 	background-color: #f4f4f4;
-	padding-top: 20px;
-	height: 90vh;
-}
-
-/* ------------------------------*/
-/* MAP */
-/* ------------------------------*/
-
-.SearchedProp {
-	padding-right: 20px;
-	padding-left: 20px;
-	padding-bottom: 20px;
+	padding-top: 10px;
+	min-height: 90vh;
 }
 
 
@@ -291,33 +281,47 @@ a:active {
 /* LIST */
 /* ------------------------------*/
 
-.List {
-	height: 80vh;
-	padding-right: 20px;
-	padding-left: 20px;
-	padding-bottom: 20px;
+.listmargin {
+	margin: 10px;
 }
 
-#list li {
+.listshell {
+	margin-bottom: 10px;
+}
+
+.listshell li {
 	list-style: none;
+	display: inline-block;
+	margin: 0px 10px 20px 10px;
+	width: 48%
 }
 
 .listitem {
-	margin-right: 20px;
-	height: 150px;
-	background-color: grey;
-	border: 5px white solid;
+	background-color: white;
+	border: 2px dashed #5AC8BD;
 }
 
 .listitemdescription {
-	height: 80%;
-	padding-top: 10%;
-	padding-right: 10px;
-	float: right;
+	padding: 10px;
 }
 
+.listitemdescription h3 {
+	margin-bottom: 5px;
+	text-decoration: underline;
+	font-weight: bold;
+	color: #333;
+}
 
+.listitemdescription h4 {
+	margin-bottom: 5px;
+	text-decoration: underline;
+	display: inline-block;
+	color: #333;
+}
 
+.listitemdescription .address {
+	margin-bottom: 5px;
+}
 
 /* ------------------------------*/
 /* MAINPROP */
@@ -364,9 +368,7 @@ a:active {
 /* ------------------------------*/
 
 .section-UserInfo {
-	height: 90vh;
-	background: black;
-	margin: 20px;
+	background: #f4f4f4;
 }
 
 
