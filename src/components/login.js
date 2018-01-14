@@ -1,21 +1,25 @@
 import React from 'react';
 
-const Login = () => {
+const Login = (props) => {
 
 		return (
 			<div className="row Login">
-				<form action="/login" method="POST">
-               <div class="form-group">
-                  <label for="username">User Name</label>
-                  <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username" />
+            <br />
+				<form onSubmit={props.userSubmit}>
+               <div className="form-group">
+                  <label for="username">User Name: </label>
+                  <input type="text" className="form-control" name="username" id="username" placeholder="Enter Username" />
                </div>
-               <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" class="form-control" name="password" id="password" placeholder="Password" />
+               <br />
+               <div className="form-group">
+                  <label for="password">Password: </label>
+                  <input type="password" className="form-control" name="password" id="password" placeholder="Enter Password" />
                </div>
-               <button type="submit" class="btn btn-primary">Submit</button>
+               <br />
+               <button type="submit" className="btn btn-full">Submit</button>
+               <br />
+               <br />
             </form>
-
 			</div>
 		);
 }

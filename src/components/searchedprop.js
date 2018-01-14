@@ -8,13 +8,24 @@ const SearchedProp = ({searchProperty, onPropertySelect}) => {
 			<div className="listitem" onClick = {() => onPropertySelect(searchProperty)}>
 				<div className="listitemdescription">
 					<h3>Address</h3>
-					<p className="address">123 Fake Address</p>
-					<p className="address">Highlands Ranch, Colorado 80126</p>
-					<h4>Zillow Estimate: </h4> <span> $123564</span><br />
+					<p className="address">4296 W 7th St</p>
+					<p className="address">Long Beach, CA 90802</p>
+					<h4>Zillow Estimate: </h4> <span> $319,800</span><br />
 					<h4>Region/Neighborhood: </h4>
-					<span> Castle Pines</span><br />
+					<span> Long Beach</span><br />
 					<h4>Additional Information:</h4>
-					<p>Additional House Details go here. If I keep writing we should see that the max width of the box doesn't exceed 50% of the screen.</p>
+					<p>
+Status
+Active
+Price/Sq Ft
+$382
+On realtor.com®
+10 hours
+Type
+Condo/townhome/row home/co-op
+Built
+1984
+MOTIVATED SELLER! Owner WILL PAY for first six months of HOA dues with a full price offer! A Must See, Completely Remodeled as of Nov. 201, modern, luxury Condo in Downtown Long Beach. </p>
 				</div>
 				<div className="clear"></div>
 			</div>

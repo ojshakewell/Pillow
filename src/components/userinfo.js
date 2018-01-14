@@ -14,13 +14,9 @@ class UserInfo extends Component {
 		return (
 			<div className="section-UserInfo">
 				
-				<Login />
-				<p>Username: You gave it, you should know it...</p>
-				<p>Password: You think I'll tell you that?</p>
-				<br />
-				<p>Saved Properties: I'm not psychic.</p>
-
-
+				<Login 
+					userSubmit = {this.props.userSubmit}
+				/>
 			</div>
 		);
 	}

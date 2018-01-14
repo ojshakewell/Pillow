@@ -7,12 +7,11 @@ import SearchResults from './components/searchresults';
 import MainProp from './components/mainprop';
 import UserInfo from './components/userinfo';
 import Footer from './components/footer';
-import Login from './components/login';
 let axios = require('axios');
 let parseString = require('xml2js-es6-promise');
 
 //zillow API key
-let zwsId = 'X1-ZWz18uicz698gb_1d5w6';
+let zwsId = 'X1-ZWz18uicz698gb_1d5w6'
 
 //need to add to search integration in RunSearch function and dynamcially update.
 //will require the search.js page to pass search value to RunSearch.
@@ -44,7 +43,7 @@ class App extends Component {
 		super(props);
 		
 		this.state = {
-			page: "user",
+			page: "home",
 			searchProperty: {},
 			properties: []
 		}
@@ -55,7 +54,6 @@ class App extends Component {
 		// Make a request for a user with a given ID
 		let searchProperty;
 		let properties;
-
 		axios.get(apiSearchUrl)
 		.then((response) => {
 		  return parseString(response.data);
@@ -65,8 +63,8 @@ class App extends Component {
 		  return this.setState({searchProperty: result});
 		})
 		.then(() => {
-			console.log(searchProperty);
-			console.log(JSON.stringify(searchProperty,null,2));
+			// console.log(searchProperty);
+			// console.log(JSON.stringify(searchProperty,null,2));
 			propId = this.state.searchProperty["SearchResults:searchresults"].response[0].results[0].result[0].zpid[0];
 			let apiCompareUrl = '/webservice/GetComps.htm?zws-id=' + zwsId + '&zpid=' + propId + '&count=12';
 			return axios.get(apiCompareUrl);
@@ -78,9 +76,9 @@ class App extends Component {
 			properties = result;
 			return this.setState({
 				properties: result,
-				selectedProperty: ''
-			  },
-
+				selectedProperty: '',
+				page: "search"
+			  }
 			);
 		})
 		.then(() => {
@@ -88,6 +86,29 @@ class App extends Component {
 		})
 		.catch(function (error) {
 		  console.log(error);
+		});
+	}
+
+	onSearchSubmit = () => {
+		console.log("hi");
+		this.setState({page: "search"})
+	}
+
+	userSubmit = (e) => {
+		console.log(e);
+		axios.post("/login", (req, res) => {
+        console.log(req.body);
+    });
+  
+
+		this.setState({
+			page: "home"
+		});
+	}
+
+	LoginClick = (e) => {
+		this.setState({
+			page: "user"
 		});
 	}
 
@@ -100,7 +121,9 @@ class App extends Component {
 				{this.state.page === "search" &&
 					<Fragment>
 						<div className="header2">
-							<Header />
+							<Header 
+								LoginClick = {this.LoginClick}
+							/>
 						</div>
 						<SearchResults 
 							searchProperty = {this.state.searchProperty}
@@ -113,7 +136,9 @@ class App extends Component {
 				{this.state.page === "property" &&
 					<Fragment>
 						<div className="header2">
-							<Header />
+							<Header 
+								LoginClick = {this.LoginClick}
+							/>
 						</div>
 						<MainProp />
 						<Footer />
@@ -123,9 +148,13 @@ class App extends Component {
 				{this.state.page === "user" &&
 					<Fragment>
 						<div className="header2">
-							<Header />
+							<Header 
+								LoginClick = {this.LoginClick}
+							/>
 						</div>
-						<UserInfo />
+						<UserInfo 
+							userSubmit = {this.userSubmit}
+						/>
 						<Footer />
 						<div className="clear"></div>
 					</Fragment>
@@ -133,10 +162,13 @@ class App extends Component {
 				{this.state.page === "home" &&
 					<Fragment>
 						<div className="header">
-							<Header />
+							<Header 
+								LoginClick = {this.LoginClick}
+							/>
 							<div className="clear"></div>
 							<Hero 
-								onSearchTermChange = {this.runSearch()}
+								onSearchTermChange = {this.runSearch}
+								onSearchSubmit = {this.onSearchSubmit}
 							/>
 						</div>
 						<Body />
