@@ -41,20 +41,26 @@ class Search extends Component {
 
 	onInputChange (searchTerm) {
 		this.setState({searchTerm});
-		this.props.onSearchTermChange(this.state.searchTerm);
+		//this.props.onSearchTermChange(this.state.searchTerm);
 	}
 
 	render(){
 		return (
 			<div className="Search col-md-12">
-				<input 
-					className="search-field" 
-					type="text" 
-					placeholder="Enter an address to compare properties"
-					value={this.state.searchTerm}
-					onChange={event => this.onInputChange(event.target.value)}
-				/>
-				<a className="btn btn-full" href="#">Search Now</a>
+				<form onSubmit = {(e) => {
+						this.props.onSearchSubmit(); 
+						e.preventDefault();
+					}}
+				>
+					<input 
+						className="search-field" 
+						type="text" 
+						placeholder="Enter an address to compare properties"
+						value={this.state.searchTerm}
+						onChange={event => this.onInputChange(event.target.value)}
+					/>
+					<button type="submit" className="btn btn-full" href="#">Search Now</button>
+				</form>
 			</div>
 		);
 	}

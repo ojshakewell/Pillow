@@ -31,14 +31,14 @@ const SearchResults = ({searchProperty, properties})  => {
 						<div class="listitem">
 							<div class="listitemdescription">
 								<h3>Address</h3>
-								<p className="address">123 Fake Address</p>
-								<p className="address">Highlands Ranch, Colorado 80126</p>
+								<p className="address">731 E 70th St</p>
+								<p className="address">Long Beach, CA 90805</p>
 								<h4>Zillow Estimate: </h4> 
-								<span> $123564</span><br />
+								<span> $619,000</span><br />
 								<h4>Region/Neighborhood: </h4>
-								<span> Castle Pines</span><br />
+								<span> Long Beach</span><br />
 								<h4>Additional Information:</h4>
-								<p>Additional House Details go here. If I keep writing we should see that the max width of the box doesn't exceed 50% of the screen.</p>
+								<p>Rare highly-upgraded residence has been tastefully modernized with tremendous detail, which has been entirely remodeled in 2005. The open floor plan is ideal for casually-elegant living, comprised of 3 bedrooms and 2.5 baths.</p>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -47,14 +47,14 @@ const SearchResults = ({searchProperty, properties})  => {
 							<div class="listitem">
 							<div class="listitemdescription">
 								<h3>Address</h3>
-								<p className="address">234 Fake Address</p>
-								<p className="address">Highlands Ranch, Colorado 80126</p>
+								<p className="address">25 Topside Ct </p>
+								<p className="address">Long Beach, CA 90803</p>
 								<h4>Zillow Estimate: </h4> 
-								<span> $123564</span><br />
+								<span> $699,000</span><br />
 								<h4>Region/Neighborhood: </h4>
-								<span> Castle Pines</span><br />
+								<span> Long Beach</span><br />
 								<h4>Additional Information:</h4>
-								<p>Additional House Details go here. If I keep writing we should see that the max width of the box doesn't exceed 50% of the screen.</p>
+								<p>This Fabulous Home is situated on a beautiful Green Belt! Completely shows like a Model Home. It all starts with a fun front door and Mailbox. You open to High Cathedral Ceilings in the Living Room - a great feeling of OPENNESS. </p>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -63,14 +63,14 @@ const SearchResults = ({searchProperty, properties})  => {
 						<div class="listitem">
 							<div class="listitemdescription">
 								<h3>Address</h3>
-								<p className="address">345 Fake Address</p>
-								<p className="address">Highlands Ranch, Colorado 80126</p>
+								<p className="address">24 Redondo Ave</p>
+								<p className="address">Long Beach, CA 90803</p>
 								<h4>Zillow Estimate: </h4> 
-								<span> $123564</span><br />
+								<span> $849,000</span><br />
 								<h4>Region/Neighborhood: </h4>
-								<span> Castle Pines</span><br />
+								<span> Long Beach</span><br />
 								<h4>Additional Information:</h4>
-								<p>Additional House Details go here. If I keep writing we should see that the max width of the box doesn't exceed 50% of the screen.</p>
+								<p>Overflowing with charm & character, this sweet, light filled 2 bed 1 bath cottage located ½ a block to the ocean in the delightful community of Bluff Park is a must see.</p>
 							</div>
 							<div class="clear"></div>
 						</div>
@@ -79,14 +79,14 @@ const SearchResults = ({searchProperty, properties})  => {
 						<div class="listitem">
 							<div class="listitemdescription">
 								<h3>Address</h3>
-								<p className="address">456 Fake Address</p>
-								<p className="address">Highlands Ranch, Colorado 80126</p>
+								<p className="address">2433 E 15th St</p>
+								<p className="address">Long Beach, CA 90804</p>
 								<h4>Zillow Estimate: </h4> 
-								<span> $123564</span><br />
+								<span> $498,000</span><br />
 								<h4>Region/Neighborhood: </h4>
-								<span> Castle Pines</span><br />
+								<span> Long Beach</span><br />
 								<h4>Additional Information:</h4>
-								<p>Additional House Details go here. If I keep writing we should see that the max width of the box doesn't exceed 50% of the screen.</p>
+								<p>This turnkey dream home is ready for your Christmas. It is built in 1999 and freshly remodeled. It features a beautiful gated front yard and a large paved back yard with minimum maintenance.</p>
 							</div>
 							<div class="clear"></div>
 						</div>

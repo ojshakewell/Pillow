@@ -7,7 +7,10 @@ const Hero = (props) => {
 			<div className="Hero">
 				<div className="hero-text-box">
 					<h1>FIND THE PERFECT PLACE TO LAY YOUR HEAD</h1>
-					<Search onSearchTermChange={props.onSearchTermChange} />
+					<Search 
+						onSearchTermChange={props.onSearchTermChange} 
+						onSearchSubmit = {props.onSearchSubmit}
+					/>
 				</div>
 			</div>
 		);
