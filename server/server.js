@@ -14,6 +14,14 @@ app.use(bodyParser.json());
 
 mongoose.Promise = Promise;
 
+app.use()
+ devServer: {
+
+    compress: true,
+
+    disableHostCheck: true,   // That solved it
+
+ }   
 
 if(process.env.MONGODB_URI){
 	mongoose.connect(process.env.MONGODB_URI);
